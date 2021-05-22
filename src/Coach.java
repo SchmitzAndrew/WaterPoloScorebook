@@ -2,14 +2,12 @@
 
 public class Coach{
     private String myName;
-    private boolean myHomeTeam;
     private int myTimeouts;
     private int myThirtyTimeout;
     private int myCards; //yellow: 1, red: 2
 
-    public Coach( String name, boolean homeTeam, int timeouts, int thirtyTimeout, int cards){
+    public Coach( String name, int timeouts, int thirtyTimeout, int cards){
         myName = name;
-        myHomeTeam = homeTeam;
         myTimeouts = timeouts;
         myThirtyTimeout = thirtyTimeout;
         myCards = cards;
