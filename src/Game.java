@@ -25,6 +25,10 @@ public class Game {
         //Home Coach
         Coach homeCoach = new Coach("Fred Gleason", 3, 1, 0);
 
+        //Create Home Team Object
+        HomeTeam homeTeam = new HomeTeam("Broncos", 0, 0, homePlayers, homeCoach);
+
+
         //Away Team
         String[] teamTwoNames = {"Gavin A", "Gary R", "Kelly R", "Bruce W", "Elise W", "Adam W", "Lauren W", "John T"}; //Water Polo Hall of Fame 2019/20
         ArrayList<Player> awayPlayers = new ArrayList<Player>();
@@ -37,6 +41,9 @@ public class Game {
 
         //Away Coach
         Coach awayCoach = new Coach("Simone Orny", 3, 1, 0);
+
+        //Create Away Team Object
+        AwayTeam awayTeam = new AwayTeam("Broncos", 0, 0, awayPlayers, awayCoach);
     }
 
 
