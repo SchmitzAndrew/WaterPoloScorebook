@@ -36,4 +36,14 @@ public class HomeTeam {
         this.myHomeEjections = myHomeEjections;
     }
 
+    public void displayHomeTeam(){
+        System.out.println("Home Team Name: " + myHomeName);
+        System.out.println("Goals: " + this.myHomeGoals + " Ejections: " + myHomeEjections);
+        System.out.println("\n" + "Coach: ");
+        System.out.println(myHomeCoach.printCoach());
+        System.out.println("\n" + "Players: ");
+        for (Player p : myHomeTeam){
+            System.out.println(p.printPlayer());
+        }
+    }
 }

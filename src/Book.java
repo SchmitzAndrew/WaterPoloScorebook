@@ -9,11 +9,15 @@ public class Book {
         ArrayList homePlayers = play.createHomePlayers();
         Coach homeCoach = play.createHomeCoach();
         HomeTeam homeTeam = new HomeTeam("Broncos", 0, 0, homePlayers, homeCoach);
+        homeTeam.displayHomeTeam();
 
         //Create Away Team
         ArrayList awayPlayers = play.createAwayPlayers();
         Coach awayCoach = play.createAwayCoach();
         AwayTeam awayTeam = new AwayTeam("Broncos", 0, 0, awayPlayers, awayCoach);
+        awayTeam.displayAwayTeam();
+
+
 
 
     }

@@ -11,5 +11,9 @@ public class Player {
         myEjections = ejections;
     }
 
+    public String printPlayer(){
+        return ("Number: " + this.myNumber + " Name: " + this.myName + " Goals: " + this.myGoals + " Ejections: " + this.myEjections);
+    }
+
 
 }

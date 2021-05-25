@@ -35,4 +35,15 @@ public class AwayTeam{
     public void setMyAwayEjections(int myAwayEjections) {
         this.myAwayEjections = myAwayEjections;
     }
+
+    public void displayAwayTeam(){
+        System.out.println(" Away Team Name: " + myAwayName);
+        System.out.println("Goals: " + myAwayCoach + " Ejections: " + myAwayEjections);
+        System.out.println("\n" + "Coach: ");
+        System.out.println(myAwayCoach.printCoach());
+        System.out.println(" \n" +"Players: ");
+        for (Player p : myAwayTeam){
+            System.out.println(p.printPlayer());
+        }
+    }
 }
