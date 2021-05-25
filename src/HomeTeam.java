@@ -2,15 +2,21 @@
 import java.util.ArrayList;
 
 public class HomeTeam{
-    private String myAwayName;
-    private int myAwayGoals;
-    private int myAwayEjections;
-    ArrayList<Player> myHomeTeam = new ArrayList<Player>();
-    Coach myHomeCoach = new Coach("",0,0,0);
+    private final String myHomeName;
+    private int myHomeGoals;
+    private int myHomeEjections;
+    ArrayList<Player> myHomeTeam;
+    Coach myHomeCoach;
 
     public HomeTeam(String name, int goals, int ejections, ArrayList team, Coach coach) {
-
+        myHomeName = name;
+        myHomeGoals = goals;
+        myHomeEjections = ejections;
         myHomeTeam = team;
         myHomeCoach = coach;
     }
-}
+
+    public String getName() {
+        return myHomeName;
+    }
+    }
