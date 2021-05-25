@@ -15,7 +15,24 @@ public class AwayTeam{
         myAwayTeam = team;
         myAwayCoach = coach;
     }
-    public String getName(){
+
+    public String getMyAwayName() {
         return myAwayName;
+    }
+
+    public int getMyAwayGoals() {
+        return myAwayGoals;
+    }
+
+    public void setMyAwayGoals(int myAwayGoals) {
+        this.myAwayGoals = myAwayGoals;
+    }
+
+    public int getMyAwayEjections() {
+        return myAwayEjections;
+    }
+
+    public void setMyAwayEjections(int myAwayEjections) {
+        this.myAwayEjections = myAwayEjections;
     }
 }

@@ -1,7 +1,7 @@
 //extension of player that stores data for the entire team
 import java.util.ArrayList;
 
-public class HomeTeam{
+public class HomeTeam {
     private final String myHomeName;
     private int myHomeGoals;
     private int myHomeEjections;
@@ -16,7 +16,24 @@ public class HomeTeam{
         myHomeCoach = coach;
     }
 
-    public String getName() {
+    public String getMyHomeName() {
         return myHomeName;
     }
+
+    public int getMyHomeGoals() {
+        return myHomeGoals;
     }
+
+    public void setMyHomeGoals(int myHomeGoals) {
+        this.myHomeGoals = myHomeGoals;
+    }
+
+    public int getMyHomeEjections() {
+        return myHomeEjections;
+    }
+
+    public void setMyHomeEjections(int myHomeEjections) {
+        this.myHomeEjections = myHomeEjections;
+    }
+
+}
