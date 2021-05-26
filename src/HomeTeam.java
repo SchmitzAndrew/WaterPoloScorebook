@@ -32,8 +32,12 @@ public class HomeTeam {
         return myHomeEjections;
     }
 
-    public void setMyHomeEjections(int myHomeEjections) {
-        this.myHomeEjections = myHomeEjections;
+    public void ejectionEarned(int myHomeEjections) {
+        this.myHomeEjections ++;
+    }
+
+    public void goalScored(){
+        this.myHomeGoals ++;
     }
 
     public void displayHomeTeam(){
@@ -45,5 +49,7 @@ public class HomeTeam {
         for (Player p : myHomeTeam){
             System.out.println(p.printPlayer());
         }
+        System.out.println("________________________________________");
     }
 }
+

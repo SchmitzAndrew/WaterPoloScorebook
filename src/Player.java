@@ -1,6 +1,6 @@
 public class Player {
-    private String myNumber; //needs to account for 1A
-    private String myName;
+    private final String myNumber; //needs to account for 1A
+    private final String myName;
     private int myGoals;
     private int myEjections;
 
@@ -14,6 +14,31 @@ public class Player {
     public String printPlayer(){
         return ("Number: " + this.myNumber + " Name: " + this.myName + " Goals: " + this.myGoals + " Ejections: " + this.myEjections);
     }
+
+
+    public void goalScored(){
+        this.myGoals ++;
+    }
+
+    public void ejectionEarned(){
+        this.myEjections ++;
+    }
+    public int getMyGoals() {
+        return myGoals;
+    }
+
+    public void setMyGoals(int myGoals) {
+        this.myGoals = myGoals;
+    }
+
+    public int getMyEjections() {
+        return myEjections;
+    }
+
+    public void setMyEjections(int myEjections) {
+        this.myEjections = myEjections;
+    }
+
 
 
 }

@@ -7,6 +7,13 @@ public class Game {
     public HomeTeam homeTeam;
     public AwayTeam awayTeam;
 
+    //Update teams variables
+    public int homeTeamGoals;
+    public int awayTeamGoals;
+    public int homeTeamEjections;
+    public int awayTeamEjections;
+
+
     public Game() {
 
     }
@@ -54,6 +61,17 @@ public class Game {
         return awayCoach;
     }
 
+    //Adds goals and ejections from each player to the teams
+    public void updateTeams(HomeTeam myHomeTeam, AwayTeam myAwayTeam){
+        homeTeamGoals = 0;
+        awayTeamGoals = 0;
+        homeTeamEjections = 0;
+        awayTeamEjections = 0;
+
+        //for (Player p : myHomeTeam){
+
+       // }
+    }
 
 }
 //    public void displayTeams(){

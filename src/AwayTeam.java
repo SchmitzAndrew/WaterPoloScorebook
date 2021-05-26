@@ -15,7 +15,13 @@ public class AwayTeam{
         myAwayTeam = team;
         myAwayCoach = coach;
     }
+    public void ejectionEarned(int myHomeEjections) {
+        this.myAwayEjections ++;
+    }
 
+    public void goalScored(){
+        this.myAwayGoals ++;
+    }
     public String getMyAwayName() {
         return myAwayName;
     }
@@ -38,12 +44,13 @@ public class AwayTeam{
 
     public void displayAwayTeam(){
         System.out.println(" Away Team Name: " + myAwayName);
-        System.out.println("Goals: " + myAwayCoach + " Ejections: " + myAwayEjections);
+        System.out.println("Goals: " + myAwayGoals + " Ejections: " + myAwayEjections);
         System.out.println("\n" + "Coach: ");
         System.out.println(myAwayCoach.printCoach());
         System.out.println(" \n" +"Players: ");
         for (Player p : myAwayTeam){
             System.out.println(p.printPlayer());
         }
+        System.out.println("________________________________________");
     }
 }
