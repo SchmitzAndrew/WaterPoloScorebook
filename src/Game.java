@@ -61,6 +61,12 @@ public class Game {
         return awayCoach;
     }
 
+    public void displayTeams(HomeTeam homeTeam, AwayTeam awayTeam){
+        homeTeam.displayHomeTeam();
+        System.out.print("\n");
+        awayTeam.displayAwayTeam();
+
+    }
     //Adds goals and ejections from each player to the teams
     public void updateTeams(HomeTeam myHomeTeam, AwayTeam myAwayTeam){
         homeTeamGoals = 0;

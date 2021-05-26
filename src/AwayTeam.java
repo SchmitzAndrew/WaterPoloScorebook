@@ -43,7 +43,7 @@ public class AwayTeam{
     }
 
     public void displayAwayTeam(){
-        System.out.println(" Away Team Name: " + myAwayName);
+        System.out.println("Away Team Name: " + myAwayName);
         System.out.println("Goals: " + myAwayGoals + " Ejections: " + myAwayEjections);
         System.out.println("\n" + "Coach: ");
         System.out.println(myAwayCoach.printCoach());

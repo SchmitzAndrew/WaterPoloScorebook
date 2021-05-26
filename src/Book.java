@@ -24,7 +24,9 @@ public class Book {
         awayTeam.myAwayTeam.get(0).goalScored();
         homeTeam.myHomeTeam.get(5).goalScored();
 
+
         game.updateTeams(homeTeam, awayTeam);
+        game.displayTeams(homeTeam, awayTeam);
 
 
     }
