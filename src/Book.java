@@ -14,7 +14,7 @@ public class Book {
         //Create Away Team
         ArrayList awayPlayers = game.createAwayPlayers();
         Coach awayCoach = game.createAwayCoach();
-        AwayTeam awayTeam = new AwayTeam("Broncos", 0, 0, awayPlayers, awayCoach);
+        AwayTeam awayTeam = new AwayTeam("Wolverines", 0, 0, awayPlayers, awayCoach);
         awayTeam.displayAwayTeam();
 
         //Simulate a Game
@@ -28,6 +28,35 @@ public class Book {
         game.updateTeams(homeTeam, awayTeam);
         game.displayTeams(homeTeam, awayTeam);
 
+        System.out.println("Quarter 2 Start");
+        homeTeam.myHomeTeam.get(5).goalScored();
+        homeTeam.myHomeTeam.get(4).goalScored();
+        homeTeam.myHomeTeam.get(3).ejectionEarned();
+        awayTeam.myAwayTeam.get(6).goalScored();
+        awayTeam.myAwayTeam.get(2).goalScored();
 
+        game.updateTeams(homeTeam, awayTeam);
+        game.displayTeams(homeTeam, awayTeam);
+
+        System.out.println("Quarter 3 Start");
+        homeTeam.myHomeTeam.get(3).goalScored();
+        homeTeam.myHomeTeam.get(5).goalScored();
+        homeTeam.myHomeTeam.get(3).ejectionEarned();
+
+        game.updateTeams(homeTeam, awayTeam);
+        game.displayTeams(homeTeam, awayTeam);
+
+        System.out.println("Quarter 4 Start");
+        awayTeam.myAwayTeam.get(3).goalScored();
+        awayTeam.myAwayTeam.get(3).goalScored();
+        homeTeam.myHomeTeam.get(4).ejectionEarned();
+        awayTeam.myAwayTeam.get(1).ejectionEarned();
+
+
+        game.updateTeams(homeTeam, awayTeam);
+        game.displayTeams(homeTeam, awayTeam);
+
+        String winner = game.determineWinner(homeTeam, awayTeam);
+        System.out.println(winner + " won the game!");
     }
 }

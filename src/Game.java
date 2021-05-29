@@ -68,22 +68,40 @@ public class Game {
 
     }
     //Adds goals and ejections from each player to the teams
-    public void updateTeams(HomeTeam myHomeTeam, AwayTeam myAwayTeam){
+    public void updateTeams(HomeTeam homeTeam, AwayTeam awayTeam){
         homeTeamGoals = 0;
         awayTeamGoals = 0;
         homeTeamEjections = 0;
         awayTeamEjections = 0;
 
-        //for (Player p : myHomeTeam){
+        for (Player p : homeTeam.myHomeTeam){
+            homeTeamGoals += p.getMyGoals();
+            homeTeamEjections += p.getMyEjections();
+        }
 
-       // }
+        for (Player p : awayTeam.myAwayTeam){
+            awayTeamGoals += p.getMyGoals();
+            awayTeamEjections += p.getMyEjections();
+        }
+
+        homeTeam.setMyHomeGoals(homeTeamGoals);
+        homeTeam.setMyHomeEjections(homeTeamEjections);
+
+        awayTeam.setMyAwayGoals(awayTeamGoals);
+        awayTeam.setMyAwayEjections(awayTeamEjections);
     }
 
+    public String determineWinner(HomeTeam homeTeam, AwayTeam awayTeam){
+        if (homeTeam.getMyHomeGoals() > awayTeam.getMyAwayGoals()){
+            return homeTeam.getMyHomeName();
+        }else if(homeTeam.getMyHomeGoals() == awayTeam.getMyAwayGoals()){
+            return "Neither team";
+        }else {
+            return awayTeam.getMyAwayName();
+        }
+    }
 }
-//    public void displayTeams(){
-//        System.out.println("Home Team: " + homeTeam.getName() );
-//        System.out.println("Away Team: " + awayTeam.getName());
-//    }
+
 
 
 

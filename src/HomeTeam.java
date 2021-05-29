@@ -31,6 +31,9 @@ public class HomeTeam {
     public int getMyHomeEjections() {
         return myHomeEjections;
     }
+    public void setMyHomeEjections(int myHomeEjections) {
+        this.myHomeEjections = myHomeEjections;
+    }
 
     public void ejectionEarned(int myHomeEjections) {
         this.myHomeEjections ++;
